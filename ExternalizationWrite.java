@@ -6,13 +6,10 @@ import java.util.HashMap;
 
 public class ExternalizationWrite {
     public static void main(String[] args) {
-        HashMap<String, String> map = new HashMap<String, String>();
-        map.put("Course", "BSSE");
-        map.put("Year","II");
-        map.put("Campus","Main");
+    
 
         try {
-            ExternalExample obj = new ExternalExample("Benjamin", 21, map);
+            ExternalExample obj = new ExternalExample("Benjamin", 21);
             // Opens the file going to be stored.
             FileOutputStream fin = new FileOutputStream("exter.ser");
             // Preparing to write an object to a file.

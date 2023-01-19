@@ -2,7 +2,6 @@ package Java;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
-import java.util.Iterator;
 
 public class ExternalizationRead {
         public static void main(String[] args) {
@@ -18,12 +17,6 @@ public class ExternalizationRead {
             obj.readExternal(oin);
             System.out.println(obj.name);
             System.out.println(obj.age);
-            Iterator<String> iter  = obj.details.keySet().iterator();
-            while(iter.hasNext()) {
-                String key = iter.next();
-                String value = obj.details.get(key);
-                System.out.println(key+" : "+value);
-            }
                 
             } catch(Exception e) {
 
