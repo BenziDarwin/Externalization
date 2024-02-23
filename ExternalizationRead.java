@@ -1,5 +1,6 @@
 package Java;
 
+import io.github.pixee.security.ObjectInputFilters;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
@@ -9,7 +10,8 @@ public class ExternalizationRead {
             
             FileInputStream in = new FileInputStream("exter.ser");
             ObjectInputStream oin = new ObjectInputStream(in);
-            
+            ObjectInputFilters.enableObjectFilterIfUnprotected(oin);
+
             // Object created to access the functions able to read byte array from file.
             ExternalExample obj = new ExternalExample();
 
